@@ -25,7 +25,7 @@
 
   <main id="experience" aria-hidden="true">
     <section class="hero full">
-      <div class="cover photo"><span>Tu fotografía de portada</span></div>
+      <div class="cover photo" style="background-image:url('assets/images/portada.webp')"><span>Tu fotografía de portada</span></div>
       <div class="veil"></div>
       <div class="hero-content">
         <p class="eyebrow reveal">Una historia de Fabian <i>&</i> Daira</p>
@@ -102,13 +102,13 @@
     </section>
 
     <section class="final full">
-      <div class="final-photo photo"><span>Tu fotografía final</span></div><div class="veil"></div>
+      <div class="final-photo photo" style="background-image:url('assets/images/final.webp')"><span>Tu fotografía final</span></div><div class="veil"></div>
       <div class="final-content reveal"><small>07 / Continuará</small><h2>Gracias por acompañarme<br>durante este primer año.</h2><p>Espero que este sea solamente el comienzo.</p><button class="pill" id="second-year" type="button">Comenzar nuestro segundo año <b>❤️</b></button></div>
       <div id="answer" aria-live="polite"><p>Respuesta correcta ❤️</p></div>
     </section>
   </main>
 
-  <dialog id="lightbox"><button id="close" type="button" aria-label="Cerrar">×</button><div class="lightbox-photo photo"></div><div class="caption"><small></small><p></p></div></dialog>
+  <dialog id="lightbox"><button id="close" type="button" aria-label="Cerrar">×</button><div class="lightbox-photo photo"></div><div class="caption"><small></small><p></p><span id="memory-audio-status" aria-live="polite"></span></div><audio id="memory-audio" preload="metadata"></audio></dialog>
   <script src="data.js"></script><script src="script.js"></script>
 </body>
 </html>

@@ -59,6 +59,27 @@ function animateNumbers() {
 }
 
 const lightbox = document.querySelector('#lightbox');
+const memoryAudio = document.querySelector('#memory-audio');
+const memoryAudioStatus = document.querySelector('#memory-audio-status');
+
+function stopMemoryAudio() {
+  if (memoryAudio.paused) return;
+  const fade = setInterval(() => {
+    memoryAudio.volume = Math.max(0, memoryAudio.volume - .1);
+    if (memoryAudio.volume === 0) {
+      clearInterval(fade);
+      memoryAudio.pause(); memoryAudio.currentTime = 0; memoryAudio.volume = 1;
+    }
+  }, 35);
+}
+
+async function playMemoryAudio(memory) {
+  memoryAudioStatus.textContent = '';
+  if (!memory.audio) return;
+  memoryAudio.src = memory.audio; memoryAudio.volume = 1;
+  try { await memoryAudio.play(); }
+  catch { memoryAudioStatus.textContent = 'Agrega esta canción en assets/audio para escucharla aquí.'; }
+}
 document.addEventListener('click', event => {
   const item = event.target.closest('.gallery-item');
   if (!item) return;
@@ -67,10 +88,12 @@ document.addEventListener('click', event => {
   lightbox.querySelector('.caption small').textContent = memory.date;
   lightbox.querySelector('.caption p').textContent = memory.phrase;
   lightbox.showModal();
+  playMemoryAudio(memory);
 });
 
-document.querySelector('#close').addEventListener('click', () => lightbox.close());
-lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); });
+function closeMemory() { stopMemoryAudio(); lightbox.close(); }
+document.querySelector('#close').addEventListener('click', closeMemory);
+lightbox.addEventListener('click', event => { if (event.target === lightbox) closeMemory(); });
 document.querySelector('#skip').addEventListener('click', endIntro);
 document.querySelector('#begin').addEventListener('click', () => document.querySelector('#recorrido').scrollIntoView());
 document.querySelector('#second-year').addEventListener('click', () => document.querySelector('#answer').classList.add('visible'));
