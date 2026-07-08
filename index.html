@@ -25,11 +25,11 @@
 
   <main id="experience" aria-hidden="true">
     <section class="hero full">
-      <div class="cover photo" style="background-image:url('assets/images/portada.webp')"><span>Tu fotografía de portada</span></div>
+      <div class="cover photo" style="background-image:url('assets/images/portada.webp')" role="img" aria-label="Fotografía de portada de Fabian y Daira"></div>
       <div class="veil"></div>
       <div class="hero-content">
-        <p class="eyebrow reveal">Una historia de Fabian <i>&</i> Daira</p>
-        <h1 class="reveal">Nuestro<br><em>primer año</em></h1>
+        <p class="eyebrow reveal">Para Daira con mucho amor</p>
+        <h1 class="reveal">Desde entonces<br><em>hasta hoy</em></h1>
         <p class="hero-date reveal">12 · 07 · 2025 — 12 · 07 · 2026</p>
         <button class="pill reveal" id="begin" type="button">Comenzar recorrido <b>↓</b></button>
       </div>
@@ -39,48 +39,43 @@
     <section class="prologue pad" id="recorrido">
       <div class="narrow reveal">
         <small>00 / Prólogo</small>
-        <h2>La historia empezó<br><em>un poco antes.</em></h2>
-        <p>Aunque hoy celebramos un año oficialmente, nuestra historia comenzó un poco antes. Este es nuestro recorrido: una colección de instantes, risas y lugares que ahora significan algo porque los vivimos juntos.</p>
+        <h2>La vida se puso más bonita<br><em>desde que estás en ella.</em></h2>
+        <p>Aunque hoy celebramos un año oficialmente, llevábamos un tiempo acumulando momentos que ya se sentían especiales. Esta página es para volver a algunos de ellos, recordar los que vinieron después y guardar un pedacito de todo lo que hemos vivido juntos.</p>
       </div>
     </section>
 
     <section class="timeline pad">
-      <header class="heading reveal"><small>01 / Nuestra historia</small><h2>Ocho recuerdos,<br><em>un mismo nosotros.</em></h2></header>
+      <header class="heading reveal"><small>01 / Nuestra historia</small><h2>Recuerdos de<br><em>un mismo nosotros.</em></h2></header>
       <div id="chapters" class="chapters"></div>
     </section>
 
     <section class="gallery-section pad">
-      <header class="heading reveal"><small>02 / Instantes</small><h2>Momentos que<br><em>volvería a elegir.</em></h2></header>
+      <header class="heading gallery-heading reveal">
+        <div><small>02 / Instantes</small><h2>Momentos que<br><em>volvería a elegir.</em></h2></div>
+        <div class="gallery-music">
+          <button id="music-toggle" class="gallery-music-button" type="button" aria-label="Reproducir nuestra canción"><span>▶</span></button>
+          <small id="music-status">Esta canción me recuerda a ti</small>
+        </div>
+        <audio id="anniversary-audio" src="assets/audio/cancion1.mp3" preload="metadata"></audio>
+      </header>
       <div id="gallery" class="gallery"></div>
       <p class="hint reveal">Toca una fotografía para descubrir su recuerdo</p>
-    </section>
-
-    <section class="music-section pad">
-      <div class="music-player reveal">
-        <div class="music-copy"><small>03 / Nuestra banda sonora</small><h2>Canciones que también<br><em>guardan recuerdos.</em></h2><p id="music-status">Elige una canción para acompañar el recorrido.</p></div>
-        <div class="player-controls">
-          <button id="music-toggle" class="music-toggle" type="button" aria-label="Reproducir música"><span>▶</span></button>
-          <div><small>Reproduciendo</small><strong id="track-name">Elige nuestra canción</strong></div>
-        </div>
-        <div class="track-list">
-          <button class="track-button" type="button" data-src="assets/audio/cancion1.mp3" data-name="Nuestra canción I"><span>01</span> Nuestra canción I</button>
-          <button class="track-button" type="button" data-src="assets/audio/cancion2.mp3" data-name="Nuestra canción II"><span>02</span> Nuestra canción II</button>
-        </div>
-        <!-- Coloca cancion1.mp3 y cancion2.mp3 dentro de assets/audio/. No se reproducen automáticamente. -->
-        <audio id="anniversary-audio" preload="metadata"></audio>
-      </div>
     </section>
 
     <section class="letter-section pad">
       <div class="letter-wrap reveal">
         <div class="seal" aria-hidden="true">F + D</div>
         <article class="letter">
-          <small>04 / Para ti</small><h2>Mi amor,</h2>
+          <small>03 / Para ti</small><h2>Mi amor,</h2>
           <div class="letter-text">
-            <p>Hace un año comenzó algo que no sabía cuánto iba a cambiar mis días.</p>
-            <p>Gracias por cada momento sencillo que convertiste en recuerdo, por las risas inesperadas y por hacer que cualquier lugar se sienta como casa si estás tú.</p>
-            <p>Esta página guarda apenas una parte de todo lo que significó este año. La otra parte vive en mí: en todo lo que aprendí contigo y en las ganas de seguir escribiendo nuestra historia.</p>
-            <p>Te elegiría en este año y en todos los que vengan.</p>
+            <p>A veces pienso en todo el tiempo que pasó antes de llegar hasta aquí. En tantos momentos de nuestras vidas, en todos los caminos que recorrimos y en ese sentimiento que, de alguna manera, siempre me hizo querer estar cerca de ti.</p>
+            <p>Durante mucho tiempo imaginé lo bonito que sería poder compartir mi vida contigo. Y ahora que puedo hacerlo, a veces miro hacia atrás con una mezcla extraña de nostalgia y felicidad, porque aquel deseo que perseguí durante tanto tiempo terminó convirtiéndose en algo incluso más hermoso de lo que imaginaba.</p>
+            <p>Estar contigo ha sido cumplir un sueño que guardé durante mucho tiempo. Pero más que tenerte a mi lado, lo que más quiero es verte feliz. Quiero acompañarte en tus sueños, celebrar tus alegrías, abrazarte en tus días difíciles y ser una persona con la que puedas sentirte querida, segura y libre de ser tú misma.</p>
+            <p>Gracias por cada momento sencillo que convertiste en recuerdo, por las risas inesperadas, por cada aventura y por hacer que cualquier lugar se sienta especial cuando estás tú.</p>
+            <p>Esta página guarda apenas una pequeña parte de nuestra historia. Hay recuerdos que caben en fotografías, canciones y palabras, pero hay otros que simplemente viven en mí: en todo lo que sentí antes de llegar hasta aquí, en todo lo que siento ahora y en todo lo que todavía sueño vivir contigo.</p>
+            <p>Si pudiera hablar con aquel Fabian que tantas veces soñó con estar a tu lado, creo que simplemente le diría que valió la pena esperar.</p>
+            <p>Y si hay algo que deseo para todo lo que viene, es seguir viéndote sonreír, seguir descubriendo la vida contigo y hacer todo lo que esté en mis manos para aportar a tu felicidad.</p>
+            <p>Te amo, Daira. Y qué bonito ha sido, después de tanto tiempo, poder llamarte mi amor.</p>
           </div>
           <p class="signature">Con todo mi amor,<br><em>Fabian</em></p>
         </article>
@@ -88,7 +83,7 @@
     </section>
 
     <section class="numbers pad">
-      <header class="heading reveal"><small>05 / Nuestro año en números</small><h2>Lo que sí se puede contar.<br><em>Y lo que no.</em></h2></header>
+      <header class="heading reveal"><small>04 / Nuestro año en números</small><h2>Lo que sí se puede contar.<br><em>Y lo que no.</em></h2></header>
       <div class="stats">
         <div class="stat reveal"><b data-count="365">0</b><span>días juntos</span></div>
         <div class="stat reveal"><b data-count="12">0</b><span>meses eligiéndonos</span></div>
@@ -98,17 +93,30 @@
     </section>
 
     <section class="future-section pad">
-      <div class="future-card reveal"><small>06 / Lo que viene</small><span aria-hidden="true">· · ·</span><h2>Próximo recuerdo:<br><em>en construcción…</em></h2><p>Los próximos recuerdos todavía no existen, pero tengo muchas ganas de vivirlos contigo.</p></div>
+      <div class="future-card reveal"><small>05 / Lo que viene</small><span aria-hidden="true">· · ·</span><h2>Próximo recuerdo:<br><em>en construcción…</em></h2><p>Los próximos recuerdos todavía no existen, pero tengo muchas ganas de vivirlos contigo.</p></div>
     </section>
 
     <section class="final full">
-      <div class="final-photo photo" style="background-image:url('assets/images/final.webp')"><span>Tu fotografía final</span></div><div class="veil"></div>
-      <div class="final-content reveal"><small>07 / Continuará</small><h2>Gracias por acompañarme<br>durante este primer año.</h2><p>Espero que este sea solamente el comienzo.</p><button class="pill" id="second-year" type="button">Comenzar nuestro segundo año <b>❤️</b></button></div>
-      <div id="answer" aria-live="polite"><p>Respuesta correcta ❤️</p></div>
+      <div class="final-photo photo" style="background-image:url('assets/images/final.webp')" role="img" aria-label="Fotografía final de Fabian y Daira"></div><div class="veil"></div>
+      <div class="final-content reveal"><small>06 / Continuará</small><h2>Gracias por acompañarme<br>durante este primer año.</h2><p>Espero que este sea solamente el comienzo.</p><button class="pill" id="second-year" type="button">Comenzar nuestro segundo año <b>❤️</b></button></div>
+      <div id="answer" aria-live="polite">
+        <div class="answer-stars" aria-hidden="true"></div>
+        <div class="answer-glow" aria-hidden="true"></div>
+        <div class="answer-content">
+          <small class="answer-kicker">Entonces…</small>
+          <p class="answer-title">Respuesta correcta <span>❤️</span></p>
+          <h3 class="answer-message">Sigamos escribiendo<br>todo lo que viene.</h3>
+          <div class="answer-line" aria-hidden="true"></div>
+          <p class="answer-beginning">Nuestro segundo año comienza aquí.</p>
+          <small class="answer-signature">Fabian & Daira · Continuará</small>
+          <button id="replay-finale" class="answer-replay" type="button">Volver a mirar</button>
+        </div>
+      </div>
     </section>
   </main>
 
-  <dialog id="lightbox"><button id="close" type="button" aria-label="Cerrar">×</button><div class="lightbox-photo photo"></div><div class="caption"><small></small><p></p><span id="memory-audio-status" aria-live="polite"></span></div><audio id="memory-audio" preload="metadata"></audio></dialog>
+  <audio id="chapter-audio" preload="metadata"></audio>
+  <dialog id="lightbox"><button id="close" type="button" aria-label="Cerrar">×</button><button id="lightbox-prev" class="lightbox-arrow lightbox-arrow--prev" type="button" aria-label="Anterior">‹</button><button id="lightbox-next" class="lightbox-arrow lightbox-arrow--next" type="button" aria-label="Siguiente">›</button><img id="lightbox-image" alt=""><video id="lightbox-video" muted loop playsinline controls></video><div class="caption"><small></small><p></p></div></dialog>
   <script src="data.js"></script><script src="script.js"></script>
 </body>
 </html>
