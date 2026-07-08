@@ -82,8 +82,8 @@ window.STORY = {
     {
       number: "06",
       title: "Imagine Dragons",
-      date: "Nuestro concierto",
-      text: "Cantamos entre miles de personas, pero para mí solo existíamos nosotros y la banda sonora de esa noche.",
+      date: "Una noche para recordar",
+      text: "Entre luces, canciones y una emoción enorme, vivimos una noche que tenía mucho de ti y que terminó quedándose también en nuestra historia.",
       media: [
         "assets/recuerdos/06-imagine-dragons/foto-1.webp",
         "assets/recuerdos/06-imagine-dragons/video-1.mp4",
