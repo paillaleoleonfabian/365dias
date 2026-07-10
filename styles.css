@@ -25,7 +25,7 @@ dialog{width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;
 .gallery-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:28px}
 .gallery-heading>div:first-child{min-width:0}
 .gallery-music{display:flex;flex-direction:column;align-items:center;gap:9px;flex:0 0 auto;padding-bottom:8px}
-.gallery-music small{color:#7f8e90;font-size:.5rem;letter-spacing:.12em;white-space:nowrap}
+.gallery-music small{max-width:105px;color:#7f8e90;font-size:.5rem;line-height:1.35;letter-spacing:.12em;text-align:center;white-space:normal;overflow-wrap:break-word}
 .gallery-music-button{display:grid;place-items:center;width:56px;height:56px;padding:0;border:1px solid var(--gold);border-radius:50%;background:transparent;color:var(--gold);cursor:pointer;transition:.3s}
 .gallery-music-button:hover,.gallery-music-button.playing{background:var(--gold);color:white;transform:translateY(-2px)}
 .gallery-music-button span{font-size:.82rem;transform:translateX(1px)}
@@ -108,3 +108,8 @@ dialog{width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;
 @keyframes answerHeart{0%,100%{transform:scale(1)}45%{transform:scale(1.12)}60%{transform:scale(1.04)}}
 @keyframes answerStar{0%{opacity:0;transform:translate(0,0) scale(.4)}18%{opacity:.8}75%{opacity:.45}100%{opacity:0;transform:translate(var(--drift),-105vh) scale(1.15)}}
 @media(max-width:520px){.answer-content{padding:30px 20px}#answer .answer-title{margin-block:18px 15px}.answer-line{margin-block:23px 18px}.answer-replay{margin-top:28px}}
+
+/* Protección mobile: evita que textos largos creen desplazamiento horizontal */
+html,body{max-width:100%;overflow-x:hidden}
+h1,h2,h3,p,small,button{overflow-wrap:break-word}
+.pill{max-width:100%;white-space:normal}
